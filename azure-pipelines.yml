@@ -1,19 +1,10 @@
 trigger:
-  - main  # ou la branche que tu veux surveiller
+  - main
 
 pool:
   vmImage: 'ubuntu-latest'
 
-variables:
-  JAVA_HOME: '/usr/lib/jvm/java-17-openjdk-amd64'
-
 steps:
-  - task: JavaToolInstaller@0
-    inputs:
-      versionSpec: '17'
-      jdkArchitecture: 'x64'
-      jdkSourceOption: 'PreInstalled'
-
   - task: Maven@3
     inputs:
       mavenPomFile: 'pom.xml'
