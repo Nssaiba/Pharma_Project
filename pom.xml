@@ -83,6 +83,13 @@
     </dependencies>
 
    <build>
+       <resources>
+           <resource>
+               <directory>src/main/resources</directory>
+               <filtering>true</filtering>
+               <!-- <encoding>UTF-8</encoding> --> <!-- Supprimé -->
+           </resource>
+       </resources>
     <plugins>
         <!-- Plugin Maven Resources avec encodage UTF-8 -->
         <plugin>
